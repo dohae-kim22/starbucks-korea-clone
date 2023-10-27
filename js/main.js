@@ -1,27 +1,6 @@
 'use strict'
 
 /**
- * Search Bar
- */
-const searchEl = document.querySelector('.search')
-const searchInputEl = searchEl.querySelector('input')
-
-searchEl.addEventListener('click', function () {
-  searchInputEl.focus()
-})
-
-searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused')
-  searchInputEl.setAttribute('placeholder', '통합검색')
-})
-
-searchInputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused')
-  searchInputEl.setAttribute('placeholder', '')
-})
-
-
-/**
  * Control Scrolling
  */
 const badgeEl = document.querySelector('header .badges')
@@ -160,10 +139,3 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller())
 })
-
-
-/**
- * Get this year
- */
-const thisYear = document.querySelector('.this-year')
-thisYear.textContent = new Date().getFullYear()
